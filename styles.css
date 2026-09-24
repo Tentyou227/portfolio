@@ -2765,3 +2765,41 @@ a.btn { display: inline-flex; align-items: center; text-decoration: none; }
   #w-polar .work-parts > .work-part--final { grid-column: 2 !important; grid-row: 1; }
   #w-polar .work-part--process .work-grid > figure, #w-polar .work-part--final .work-grid > figure { grid-column: auto !important; }
 }
+
+@media print {
+
+  #w-quolo .work-part--final, #w-clipstand .work-part--final,
+  #w-coffee .work-part--final, #w-inbloiva .work-part--final { break-before: page !important; margin-top: 0 !important; }
+
+  #w-quolo .work-grid--process, #w-clipstand .work-grid--process {
+    grid-template-columns: 178mm minmax(0, 1fr) !important; grid-template-rows: auto auto; gap: 4mm 6mm !important; align-items: start;
+  }
+  #w-quolo .work-grid--process > figure:nth-child(2), #w-clipstand .work-grid--process > figure:nth-child(2) { grid-column: 1 !important; grid-row: 1 / span 2 !important; }
+  #w-quolo .work-grid--process > figure:nth-child(1), #w-clipstand .work-grid--process > figure:nth-child(1) { grid-column: 2 !important; grid-row: 1 !important; }
+  #w-quolo .work-grid--process > figure:nth-child(3), #w-clipstand .work-grid--process > figure:nth-child(3) { grid-column: 2 !important; grid-row: 2 !important; }
+  #w-quolo .work-grid img, #w-clipstand .work-grid img { width: 100% !important; height: auto !important; }
+
+  #w-quolo .work-part--final, #w-clipstand .work-part--final { min-height: 168mm; display: flex; flex-direction: column; }
+  #w-quolo .work-part--final > .work-grid, #w-clipstand .work-part--final > .work-grid { margin-block: auto; }
+
+  #w-coffee .work-grid--process { grid-template-columns: repeat(2, 108mm) !important; justify-content: center !important; gap: 3mm 8mm !important; }
+  #w-coffee .work-part--process .work-grid img { width: 100% !important; height: auto !important; }
+  #w-coffee .work-part--final .work-grid img { height: 164mm !important; width: auto !important; margin-inline: auto; }
+  #w-coffee .work-part--final .work-grid > figure { justify-self: center; }
+
+  #w-polar .work-parts { grid-template-columns: 104mm minmax(0, 1fr) !important; }
+  #w-polar .work-grid img { width: 100% !important; height: auto !important; }
+
+  #w-inbloiva .work-part--final .work-grid--final { grid-template-columns: repeat(2, 108mm) !important; justify-content: center !important; gap: 3mm 8mm !important; }
+  #w-inbloiva .work-part--final .work-grid--final img { width: 100% !important; height: auto !important; }
+  #w-inbloiva .work-grid--screens { break-before: page; grid-template-columns: repeat(4, 58mm) !important; justify-content: center !important; gap: 8mm !important; margin-top: 8mm !important; }
+  #w-inbloiva .work-grid--screens img { width: 100% !important; height: auto !important; }
+}
+@media print {
+
+  #w-quolo .work-part--process, #w-clipstand .work-part--process { min-height: 168mm; display: flex; flex-direction: column; }
+  #w-quolo .work-part--process > .work-grid, #w-clipstand .work-part--process > .work-grid { margin-block: auto; }
+  #w-quolo .work-grid--process, #w-clipstand .work-grid--process { grid-template-columns: 186mm minmax(0, 1fr) !important; }
+
+  #w-inbloiva .work-grid--screens { grid-template-columns: repeat(4, 62mm) !important; gap: 6mm !important; margin-top: 14mm !important; }
+}
