@@ -1481,6 +1481,7 @@ p, dd, li, figcaption, .work-lead, .work-sub-desc, .item-set-desc, .part-desc {
   line-height: 1.8;
   max-width: 30em;
 }
+.cover .cover-intro + .cover-intro { margin-top: 0.8em; }
 
 .group-h--light .sec-no { color: var(--accent); }
 
