@@ -1482,6 +1482,7 @@ p, dd, li, figcaption, .work-lead, .work-sub-desc, .item-set-desc, .part-desc {
   max-width: 30em;
 }
 .cover .cover-intro + .cover-intro { margin-top: 0.8em; }
+.nobr { white-space: nowrap; }
 
 .group-h--light .sec-no { color: var(--accent); }
 
@@ -1512,7 +1513,7 @@ p, dd, li, figcaption, .work-lead, .work-sub-desc, .item-set-desc, .part-desc {
 
 @media print {
   .cover-visual { max-width: 78mm; justify-self: end; }
-  .cover .cover-intro { font-size: var(--text-base); margin-top: 4mm; max-width: 26em; }
+  .cover .cover-intro { font-size: var(--text-base); margin-top: 4mm; max-width: 32em; }
   .cover .cover-note { margin-top: 6mm; }
 
   .group-h--light {
