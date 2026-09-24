@@ -2560,3 +2560,45 @@ a.btn { display: inline-flex; align-items: center; text-decoration: none; }
 
   #w-inbloiva .work-grid--process { grid-template-columns: repeat(2, 112mm) !important; justify-content: center !important; }
 }
+
+.part-summary { display: none; }
+@media print {
+
+  .sec-prose { grid-template-columns: 52mm minmax(0, 1fr); }
+  .sec-prose .prose-note, .sec-prose p, .prose-note p { max-width: none !important; }
+  .sec-prose .prose-note p { font-size: 10px; line-height: 1.85; }
+
+  .work-part:not(:has(.work-grid--screens)) .work-grid--process,
+  .work-part--final:not(:has(.work-grid--screens)) .work-grid--final {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    justify-content: stretch !important; gap: 4mm 6mm !important;
+  }
+  .work-part:not(:has(.work-grid--screens)) .work-grid--process:has(> figure:nth-child(4)) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .work-part:not(:has(.work-grid--screens)) .work-grid--process:not(:has(> figure:nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .work-part:not(:has(.work-grid--screens)) .work-grid img {
+    width: 100%; height: 62mm; object-fit: contain; object-position: center;
+    border: 0; background: none;
+  }
+  #w-rivolio .work-grid--final img { height: auto; }
+
+  .part-summary {
+    display: flex; flex-direction: column; justify-content: center; gap: 2.5mm;
+    align-self: stretch; margin: 0; padding: 6mm 7mm;
+    background: rgba(var(--w-rgb, 28, 26, 23), 0.07);
+    border-left: 2mm solid var(--w);
+  }
+  .work-grid--final:has(> figure:nth-child(1)):not(:has(> figure:nth-child(2))) > .part-summary { grid-column: span 2; }
+  .ps-label { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--w); }
+  .ps-title { margin: 0; font-family: var(--font-display); font-size: 16px; font-weight: 700; }
+  .part-summary .value-tag { justify-self: start; align-self: flex-start; margin: 0; }
+  .ps-text { margin: 0; font-size: 10px; line-height: 1.8; }
+}
+@media print {
+
+  .work-sub--panel .sec-prose .prose-note p { font-size: 9.5px; line-height: 1.7; }
+  .work-sub--panel > .sec-prose { width: 230mm; }
+}
