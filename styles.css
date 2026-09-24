@@ -2602,3 +2602,138 @@ a.btn { display: inline-flex; align-items: center; text-decoration: none; }
   .work-sub--panel .sec-prose .prose-note p { font-size: 9.5px; line-height: 1.7; }
   .work-sub--panel > .sec-prose { width: 230mm; }
 }
+
+@media print {
+
+  .work-intro:not(.work-intro--nohero) { grid-template-columns: 200mm minmax(0, 1fr) !important; gap: 8mm !important; }
+  .work-intro .work-hero { width: 200mm !important; }
+  .work-intro .work-hero img { width: 100% !important; height: auto !important; max-height: 150mm !important; }
+  .work-intro:not(.work-intro--nohero) .work-meta > div { display: block !important; padding-block: 1.6mm !important; }
+  .work-intro:not(.work-intro--nohero) .work-meta dt { margin-bottom: 0.6mm; }
+  .work-intro:not(.work-intro--nohero) .work-meta dd { font-size: 10px; line-height: 1.7; }
+
+  .work-part:not(:has(.work-grid--screens)) .work-grid img { height: 74mm !important; }
+  #w-sns .work-part--final .work-grid img { height: 118mm !important; }
+  #w-inbloiva .work-grid--process { justify-content: center !important; }
+
+  #w-rivolio .work-part--final { page: bleed; break-before: page; height: 210mm; box-sizing: border-box; padding: 12mm 12mm 10mm; margin: 0; }
+  #w-rivolio .work-grid--final { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 4mm !important; }
+  #w-rivolio .work-grid--final figure { height: 164mm; margin: 0; }
+  #w-rivolio .work-grid--final img { width: 100% !important; height: 100% !important; object-fit: cover; }
+
+  .work-sub--booth { display: grid !important; grid-template-columns: 75mm 100mm minmax(0, 1fr) !important; gap: 4mm !important; align-items: start; }
+  .work-sub--booth > .work-sub-head { grid-column: 1 / -1; }
+  .work-sub--booth .booth-grid { display: contents !important; }
+  .work-sub--booth .booth-grid:first-of-type > figure:nth-child(1) { grid-column: 1; grid-row: 2 / span 2; }
+  .work-sub--booth .booth-grid:first-of-type > figure:nth-child(2) { grid-column: 2; grid-row: 2 / span 2; }
+  .work-sub--booth .booth-grid:last-of-type > figure:nth-child(1) { grid-column: 3; grid-row: 2; }
+  .work-sub--booth .booth-grid:last-of-type > figure:nth-child(2) { grid-column: 3; grid-row: 3; }
+  .work-sub--booth figure { margin: 0; }
+  .work-sub--booth .booth-grid:first-of-type img { width: 100% !important; height: 139mm !important; object-fit: cover; }
+  .work-sub--booth .booth-grid:last-of-type img { width: 100% !important; height: auto !important; }
+
+  #w-tsuki .work-grid--duo { display: flex !important; gap: 6mm; justify-content: center; }
+  #w-tsuki .work-grid--duo img { height: 118mm !important; width: auto !important; max-width: none !important; }
+
+  .work-grid--sleeves { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 6mm !important; }
+  .work-sub--gen:has(> .work-grid--sleeves) .work-grid--secimg { justify-content: center !important; }
+
+  .index-list img { height: 50mm !important; width: 100% !important; }
+
+  .others img { height: 120mm !important; width: 100% !important; object-fit: contain; }
+}
+@media print {
+  .work-grid--sleeves { width: 100% !important; justify-self: stretch !important; justify-content: stretch !important; }
+  .work-grid--sleeves > figure { width: 100% !important; max-width: none !important; }
+  .work-grid--sleeves img { width: 100% !important; height: auto !important; max-height: none !important; }
+  .work-sub--gen:has(> .work-grid--sleeves) .work-grid--secimg img { max-height: 40mm !important; }
+
+  .work-intro:not(.work-intro--nohero) { grid-template-columns: 212mm minmax(0, 1fr) !important; }
+  .work-intro .work-hero { width: 212mm !important; }
+  .work-intro .work-hero img { max-height: 152mm !important; }
+
+  #w-sns .work-part--final .work-grid--final { grid-template-columns: 1fr 1fr 0.62fr !important; }
+  #w-sns .work-part--final .work-grid img { height: auto !important; }
+
+  #w-inbloiva .work-part--process .work-grid--process { grid-template-columns: repeat(2, 118mm) !important; justify-content: center !important; }
+  #w-inbloiva .work-part--process .work-grid img { height: 76mm !important; }
+  .work-part .work-grid--screens { grid-template-columns: repeat(4, 50mm) !important; }
+
+  #w-tsuki .work-grid--duo > figure { flex: 0 0 auto; max-width: none !important; }
+
+  .work-grid--tiles { grid-template-columns: repeat(4, 42mm) !important; gap: 4mm 6mm !important; justify-content: start !important; }
+
+  .index-list img { height: 44mm !important; }
+
+  .others { display: grid !important; grid-template-columns: 178mm minmax(0, 1fr) !important; grid-template-rows: auto auto; gap: 5mm 6mm !important; }
+  .others > figure:first-child { grid-row: 1 / span 2; }
+  .others img { width: 100% !important; height: auto !important; }
+
+  .work-grid--secimg .logo-plain img { max-height: 40mm !important; }
+  #w-koiran .work-grid--logos img { max-height: 52mm !important; }
+}
+@media print {
+  .work-sub--gen > .work-grid--sleeves { display: grid !important; }
+
+  .work-grid--tiles { grid-template-columns: repeat(7, minmax(0, 1fr)) !important; justify-content: stretch !important; gap: 4mm !important; }
+}
+@media print {
+
+  #w-sns .work-part--final .work-grid--final { grid-template-columns: 1fr 1fr !important; }
+  #w-sns .work-part--final .part-summary { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 6mm; padding: 4mm 7mm; }
+
+  #w-inbloiva .work-part--process .work-grid--process { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #w-inbloiva .work-part--process .work-grid img { width: 100% !important; height: 78mm !important; object-fit: contain; }
+
+  .index-list img { height: 60mm !important; }
+  #w-tsuki .work-grid--duo img { height: 132mm !important; }
+  #w-koiran .work-grid--logos img { max-height: 64mm !important; height: 64mm !important; width: auto !important; }
+
+  .work-grid--tiles img { aspect-ratio: 3 / 4 !important; height: auto !important; width: 100% !important; object-fit: cover; }
+  .item-list dt { font-size: 12px; } .item-list dd { font-size: 10.5px; }
+  .item-list { row-gap: 2.4mm !important; }
+
+  .profile .history > div { padding-block: 2.6mm !important; }
+  .profile .history dt, .profile .history dd { font-size: 11px !important; }
+  .values { margin-top: 12mm !important; }
+  .values-list strong { font-size: 17px !important; margin: 2mm 0 3mm !important; }
+  .values-list p { font-size: 11px !important; line-height: 1.85 !important; }
+  .values-list .values-ex { font-size: 10px !important; }
+}
+@media print {
+
+  #w-tsuki .work-grid--duo img { height: 100mm !important; }
+}
+@media print {
+  .work-part .work-grid--screens { grid-template-columns: repeat(4, 48mm) !important; justify-content: center !important; gap: 6mm !important; }
+}
+@media print {
+  .work-part--final:has(.work-grid--screens) .work-grid--final { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 4mm !important; }
+}
+@media print {
+
+  #w-tsuki { display: grid !important; grid-template-columns: 196mm minmax(0, 1fr) !important; column-gap: 7mm !important; row-gap: 3mm !important; align-items: start; }
+  #w-tsuki > .work-sub-head, #w-tsuki > .work-grid--duo { display: contents !important; }
+  #w-tsuki > .work-sub-head > div { grid-column: 1 / -1; grid-row: 1; }
+  #w-tsuki > .work-sub-head > .work-meta { grid-column: 2; grid-row: 2; margin: 0; }
+  #w-tsuki > .work-grid--duo > figure:first-child { grid-column: 1; grid-row: 2 / span 2; margin: 0; }
+  #w-tsuki > .work-grid--duo > figure:last-child { grid-column: 2; grid-row: 3; margin: 0; }
+  #w-tsuki > .work-grid--duo > figure:first-child img { width: 100% !important; height: auto !important; }
+  #w-tsuki > .work-grid--duo > figure:last-child img { width: 100% !important; height: auto !important; }
+  #w-tsuki .work-meta > div { display: block !important; padding-block: 1.4mm !important; }
+
+  #w-sns .work-part--final .work-grid--final { grid-template-columns: 168mm minmax(0, 1fr) !important; grid-template-rows: auto auto; align-items: start; }
+  #w-sns .work-part--final .work-grid--final > figure:first-child { grid-row: 1 / span 2; }
+  #w-sns .work-part--final .part-summary { grid-column: 2; flex-direction: column; align-items: flex-start; }
+
+  #w-koiran .work-grid--logos img { max-height: 74mm !important; height: 74mm !important; }
+  .others { grid-template-columns: 190mm minmax(0, 1fr) !important; }
+}
+@media print {
+
+  .work-sub--gen:has(> .work-grid--sleeves) .work-grid--secimg { grid-template-columns: auto auto !important; justify-content: start !important; justify-items: start !important; gap: 6mm !important; }
+  .work-sub--gen:has(> .work-grid--sleeves) .work-grid--secimg img { max-height: 54mm !important; height: 54mm !important; width: auto !important; }
+}
+@media print {
+  .work-sub--gen:has(> .work-grid--sleeves) .work-grid--secimg img { max-height: 48mm !important; height: 48mm !important; }
+}
