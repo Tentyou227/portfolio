@@ -2737,3 +2737,31 @@ a.btn { display: inline-flex; align-items: center; text-decoration: none; }
 @media print {
   .work-sub--gen:has(> .work-grid--sleeves) .work-grid--secimg img { max-height: 48mm !important; height: 48mm !important; }
 }
+
+@media print {
+
+  .work-part:not(:has(.work-grid--screens)) .work-grid img { height: 60mm !important; }
+  .work-part--final:not(:has(.work-grid--screens)) .work-grid--final:has(> figure:nth-child(2)) { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .work-part--final:not(:has(.work-grid--screens)) .work-grid--final:has(> figure:nth-child(2)) img { height: 88mm !important; }
+
+  #w-polar .work-parts { display: grid; grid-template-columns: 92mm minmax(0, 1fr); column-gap: 8mm; align-items: start; break-before: page; }
+  #w-polar .work-parts > .work-part { break-before: auto !important; margin: 0 !important; }
+  #w-polar .work-part--process .work-grid--process { grid-template-columns: 1fr !important; }
+  #w-polar .work-part--process .work-grid img { height: 70mm !important; }
+  #w-polar .work-part--final .work-grid--final { grid-template-columns: 1fr !important; }
+  #w-polar .work-part--final .work-grid img { height: 148mm !important; }
+
+  #w-coffee .work-part--process .work-grid img { height: 46mm !important; }
+  #w-coffee .work-part--final .work-grid--final { grid-template-columns: 1fr !important; }
+  #w-coffee .work-part--final .work-grid img { height: 100mm !important; }
+
+  #w-sns .work-part--final { min-height: 168mm; display: flex; flex-direction: column; }
+  #w-sns .work-part--final > .work-grid { margin-block: auto; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #w-sns .work-part--final .work-grid > figure:first-child { grid-row: auto !important; }
+  #w-sns .work-part--final .work-grid img { height: auto !important; width: 100% !important; }
+}
+@media print {
+  #w-polar .work-parts > .work-part--process { grid-column: 1 !important; grid-row: 1; }
+  #w-polar .work-parts > .work-part--final { grid-column: 2 !important; grid-row: 1; }
+  #w-polar .work-part--process .work-grid > figure, #w-polar .work-part--final .work-grid > figure { grid-column: auto !important; }
+}
