@@ -1569,6 +1569,13 @@ p, dd, li, figcaption, .work-lead, .work-sub-desc, .item-set-desc, .part-desc {
 }
 .sec-prose .spec-h { grid-column: 1; }
 .sec-prose p { grid-column: 2; max-width: var(--prose); margin: 0; }
+
+@media screen and (min-width: 641px) {
+  .sec-prose { grid-template-columns: minmax(12rem, max-content) minmax(0, 1fr); }
+}
+@media screen {
+  .sec-prose .spec-ja { white-space: nowrap; }
+}
 @media (max-width: 640px) {
   .sec-prose { grid-template-columns: 1fr; row-gap: var(--space-2); }
   .sec-prose .spec-h, .sec-prose p { grid-column: 1; }
